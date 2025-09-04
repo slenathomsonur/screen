@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Student Monitor (Linewize-like)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Student Monitor</h1>
+        <p>Simulate student activity logging. Enter a "site visit" to log. Admin: Check dashboard for alerts.</p>
+        
+        <div class="input-section">
+            <input type="text" id="siteInput" placeholder="Enter site URL (e.g., example.com)">
+            <button onclick="logActivity()">Log Activity</button>
+        </div>
+        
+        <div class="dashboard" id="dashboard" style="display: none;">
+            <h2>Activity Logs</h2>
+            <ul id="logList"></ul>
+            <h2>Alerts (Risky Activities)</h2>
+            <ul id="alertList"></ul>
+            <button onclick="toggleDashboard()">Hide Dashboard</button>
+        </div>
+        
+        <button onclick="toggleDashboard()">Show Admin Dashboard</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
